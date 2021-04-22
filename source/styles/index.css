@@ -1,0 +1,23 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #292F36;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#user-information {
+  margin: auto;
+  width: 30vw;
+  height: 60vh;
+  background-color: #292F46;
+  color: #FEF9FF;
+}
+/*# sourceMappingURL=index.css.map */

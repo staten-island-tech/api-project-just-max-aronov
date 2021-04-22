@@ -1,0 +1,23 @@
+@import "_variables.scss";
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $primary;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#user-information {
+    margin: auto;
+    width: 30vw;
+    height: 60vh;
+    background-color: $secondary;
+    color: $text-color;
+}
