@@ -13,3 +13,11 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
+
+#user-information {
+    margin: auto;
+    width: 30vw;
+    height: 60vh;
+    background-color: $secondary;
+    color: $text-color;
+}

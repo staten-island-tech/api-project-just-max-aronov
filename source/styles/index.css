@@ -12,4 +12,12 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+#user-information {
+  margin: auto;
+  width: 30vw;
+  height: 60vh;
+  background-color: #292F46;
+  color: #FEF9FF;
+}
 /*# sourceMappingURL=index.css.map */

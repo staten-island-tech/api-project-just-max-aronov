@@ -3,6 +3,8 @@ import 'regenerator-runtime/runtime'
 
 const octokit = new Octokit();
 
+repoFullfilled();
+
 window.onkeyup = keyup;
 
 let inputTextValue;
@@ -17,7 +19,14 @@ function keyup(e) {
 
 function userObjectObtain() {
     return octokit.rest.users.getByUsername({
-        username: inputTextValue,
+        username: inputTextValue
+    });
+}
+
+function repoObjectObtain() {
+    return octokit.rest.repos.get({
+        owner: "JustReq",
+        repo: "JustReq"
     });
 }
 
@@ -32,5 +41,10 @@ async function userFullfilled() {
     let profileURL = userObject.html_url;
     let nickName = userObject.name;
     let repoCount = userObject.public_repos;
-    console.log(`Username ${userName} \"${nickName}\" \nAvatar: ${avatarURL}\nStatus: \"${bio}\"\nCreated at ${creationDate}\nHas ${followers} followers\nFollwing ${following} users\nProfile: ${profileURL}\n${repoCount} public repositories`)
+    document.getElementById("user-information").innerHTML = `Username ${userName} \"${nickName}\" <br>Avatar: ${avatarURL}<br>Status: \"${bio}\"<br>Created at ${creationDate}<br>Has ${followers} followers<br>Follwing ${following} users<br>Profile: ${profileURL}<br>${repoCount} public repositories`;
+}
+
+async function repoFullfilled() {
+    const repoObject = await (await repoObjectObtain()).data
+    console.log(repoObject)
 }
