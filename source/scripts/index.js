@@ -41,7 +41,7 @@ async function userFullfilled() {
     let profileURL = userObject.html_url;
     let nickName = userObject.name;
     let repoCount = userObject.public_repos;
-    document.getElementById("user-information").innerHTML = `Username ${userName} \"${nickName}\" <br>Avatar: ${avatarURL}<br>Status: \"${bio}\"<br>Created at ${creationDate}<br>Has ${followers} followers<br>Follwing ${following} users<br>Profile: ${profileURL}<br>${repoCount} public repositories`;
+    document.getElementById("user-information").innerHTML = `Username: ${userName} \"${nickName}\" <br>Avatar: ${avatarURL}<br>Status: \"${bio}\"<br>Created at ${creationDate}<br>Has ${followers} followers<br>Follwing ${following} users<br>Profile: ${profileURL}<br>${repoCount} public repositories`;
 }
 
 async function repoFullfilled() {

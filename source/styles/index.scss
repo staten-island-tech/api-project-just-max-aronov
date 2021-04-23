@@ -1,4 +1,5 @@
 @import "_variables.scss";
+@import "_header.scss";
 html,
 body {
     margin: 0;
@@ -12,12 +13,4 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
-}
-
-#user-information {
-    margin: auto;
-    width: 30vw;
-    height: 60vh;
-    background-color: $secondary;
-    color: $text-color;
 }
