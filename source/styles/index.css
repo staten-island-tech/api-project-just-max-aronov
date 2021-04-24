@@ -44,7 +44,7 @@
   height: -moz-fit-content;
   height: fit-content;
   font-family: Ubuntu, sans-serif;
-  color: #FEF9FF;
+  color: #E0FBFC;
   text-align: center;
   font-size: 5.427rem;
   letter-spacing: 0.5rem;
@@ -86,9 +86,165 @@
   height: -moz-fit-content;
   height: fit-content;
   font-family: Ubuntu, sans-serif;
-  color: #FEF9FF;
+  color: #E0FBFC;
   text-align: center;
   font-size: 2rem;
+}
+
+#navigation-section {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  top: 50%;
+  width: 100vw;
+  height: 20vh;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#nav-bar-container {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  width: 80%;
+  height: 40%;
+  left: 10%;
+  top: 5%;
+}
+
+.nav-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #3D5A80;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#users-nav-button {
+  border-radius: 2rem 0 0 2rem;
+}
+
+#code-nav-button {
+  border-radius: 0 2rem 2rem 0;
+}
+
+.nav-button:hover {
+  background-color: #2b3a53;
+}
+
+.nav-button:focus {
+  outline: 0 !important;
+}
+
+.nav-button-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-button-text {
+  -webkit-transform: translateY(27.5%);
+          transform: translateY(27.5%);
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Ubuntu, sans-serif;
+  color: #E0FBFC;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#tooltip-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.tooltip-text-container {
+  opacity: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 35%;
+  background-color: #668292;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+  border-radius: 0.25rem;
+  border: 0.5vh solid #3D5A80;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.tooltip-text {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Ubuntu, sans-serif;
+  color: #E0FBFC;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 html,
@@ -99,7 +255,7 @@ body {
 }
 
 body {
-  background-color: #292F36;
+  background-color: #171c24;
 }
 
 body::-webkit-scrollbar {
