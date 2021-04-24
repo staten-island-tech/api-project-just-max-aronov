@@ -5,7 +5,7 @@
     "scripts": {
         "clean": "rm dist/bundle.js",
         "start": "parcel source/index.html",
-        "build": "parcel build source/index.html"
+        "build-prod": "parcel build source/index.html"
     },
     "keywords": [],
     "author": "",
