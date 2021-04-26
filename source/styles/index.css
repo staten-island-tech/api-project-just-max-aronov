@@ -89,6 +89,7 @@
   color: #E0FBFC;
   text-align: center;
   font-size: 2rem;
+  cursor: context-menu;
 }
 
 #navigation-section {
@@ -211,7 +212,7 @@
   height: 100%;
 }
 
-.tooltip-text-container {
+#tooltip-text-container {
   opacity: 0;
   position: absolute;
   display: -webkit-box;
@@ -231,7 +232,7 @@
   transition: 0.2s;
 }
 
-.tooltip-text {
+#tooltip-text {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
   margin: 0;
@@ -247,11 +248,78 @@
   font-size: 1.5rem;
 }
 
+#user-search-section {
+  opacity: 0;
+  position: absolute;
+  top: 30vh;
+  right: 110%;
+  width: 100vw;
+  height: 10vh;
+}
+
+#user-search-container {
+  width: 100%;
+  height: 10vh;
+}
+
+#user-search-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#user-search-input {
+  position: absolute;
+  top: 15%;
+  width: 75%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0.2rem solid #ccc;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  background-color: white;
+  background-image: url("../media/input-icon.png");
+  background-position: 1% 50%;
+  background-repeat: no-repeat;
+  padding: 1vw 2vh 1vw 6vh;
+}
+
+#user-search-input:focus {
+  outline: 0 !important;
+}
+
+#user-filter-section {
+  opacity: 0;
+  position: absolute;
+  top: 32vh;
+  left: -50vw;
+  width: 50vw;
+  height: 65vh;
+}
+
+#user-filter-container {
+  width: 100%;
+  height: 100%;
+}
+
+#user-filter-panel {
+  width: 100%;
+  height: 100%;
+  background-color: #3D5A80;
+  border-radius: 0 1rem 1rem 0;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {

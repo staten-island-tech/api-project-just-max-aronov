@@ -27,6 +27,7 @@
     "homepage": "https://github.com/staten-island-tech/api-project-just-max-aronov#readme",
     "description": "",
     "dependencies": {
-        "@octokit/rest": "^18.5.3"
+        "@octokit/rest": "^18.5.3",
+        "animejs": "^3.2.1"
     }
 }
