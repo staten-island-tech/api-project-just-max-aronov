@@ -141,35 +141,28 @@ document
         500
       );
 
-    let userNewShow = anime.timeline({
-      duration: 800,
-      delay: 0,
-    });
-
+    let userNewShow = anime.timeline({});
     userNewShow
-      .add(
-        {
-          targets: document.getElementById("user-search-section"),
-          left: 0,
-        },
-        0
-      )
+      .add({
+        targets: document.getElementById("user-search-section"),
+        top: 200,
+        duration: 1,
+        delay: 200,
+      })
 
-      .add(
-        {
-          targets: document.getElementById("user-search-section"),
-          top: 152.5,
-          opacity: 1,
-        },
-        700
-      )
+      .add({
+        targets: document.getElementById("user-search-section"),
+        opacity: 1,
+        top: 152.5,
+        duration: 800,
+        delay: 300,
+      });
 
-      .add(
-        {
-          targets: document.getElementById("user-filter-section"),
-          left: 50,
-          opacity: 1,
-        },
-        800
-      );
+    anime({
+      targets: document.getElementById("user-filter-section"),
+      opacity: 1,
+      left: 50,
+      duration: 800,
+      delay: 500,
+    });
   });
