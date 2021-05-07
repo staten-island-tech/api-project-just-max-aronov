@@ -100,3 +100,61 @@
   text-align: center;
   font-size: 1.25rem;
 }
+
+.user-filter-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.user-follower-filter-option {
+  transition: 0.2s;
+}
+
+.user-following-filter-option {
+  transition: 0.2s;
+}
+
+.user-repos-filter-option {
+  transition: 0.2s;
+}
+
+.user-gists-filter-option {
+  transition: 0.2s;
+}
+
+.user-follower-filter-option:hover {
+  background-color: $primary;
+}
+
+.user-following-filter-option:hover {
+  background-color: $primary;
+}
+
+.user-repos-filter-option:hover {
+  background-color: $primary;
+}
+
+#user-gists-filter-option-bl {
+  border-radius: 0 0 0 1rem;
+}
+
+#user-gists-filter-option-br {
+  border-radius: 0 0 1rem 0;
+}
+
+.user-gists-filter-option:hover {
+  background-color: $primary;
+}
+
+#user-filter-tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 20vw;
+  background-color: $primary-dark;
+  width: 15vw;
+  height: 13vh;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 10% 55%, 0 50%, 10% 45%);
+  z-index: 999;
+}

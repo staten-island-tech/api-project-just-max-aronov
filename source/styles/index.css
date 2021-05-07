@@ -377,6 +377,72 @@
   font-size: 1.25rem;
 }
 
+.user-filter-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.user-follower-filter-option {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.user-following-filter-option {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.user-repos-filter-option {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.user-gists-filter-option {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.user-follower-filter-option:hover {
+  background-color: #3D5A80;
+}
+
+.user-following-filter-option:hover {
+  background-color: #3D5A80;
+}
+
+.user-repos-filter-option:hover {
+  background-color: #3D5A80;
+}
+
+#user-gists-filter-option-bl {
+  border-radius: 0 0 0 1rem;
+}
+
+#user-gists-filter-option-br {
+  border-radius: 0 0 1rem 0;
+}
+
+.user-gists-filter-option:hover {
+  background-color: #3D5A80;
+}
+
+.user-filter-tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 20vw;
+  background-color: #2b3a53;
+  width: 15vw;
+  height: 13vh;
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 10% 55%, 0 50%, 10% 45%);
+          clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 10% 55%, 0 50%, 10% 45%);
+  z-index: 999;
+}
+
 html,
 body {
   margin: 0;

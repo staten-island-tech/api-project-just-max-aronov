@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github Data Fetcher</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/index.scss" />
-  </head>
 
-  <body>
-    <header id="page-header">
-      <div id="title-container">
-        <div id="title-text-container">
-          <h1 id="title-text" onclick="window.location.href=''">
-            Github Data Fetcher
-          </h1>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Github Data Fetcher</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/index.scss" />
+</head>
+
+<body>
+  <header id="page-header">
+    <div id="title-container">
+      <div id="title-text-container">
+        <h1 id="title-text" onclick="window.location.href=''">
+          Github Data Fetcher
+        </h1>
       </div>
-      <div id="subtitle-container">
-        <div id="subtitle-text-container">
-          <h2 id="subtitle-text">
-            Get live-updated information about Github users and repositories
-          </h2>
-        </div>
+    </div>
+    <div id="subtitle-container">
+      <div id="subtitle-text-container">
+        <h2 id="subtitle-text">
+          Get live-updated information about Github users and repositories
+        </h2>
       </div>
-    </header>
-    <section id="navigation-section">
-      <div id="nav-bar">
-        <div id="nav-bar-container">
-          <div class="nav-button-container">
-            <button class="nav-button" id="users-nav-button">
-              <div class="nav-button-text-container">
-                <h2 class="nav-button-text">Users</h2>
-              </div>
-            </button>
-          </div>
-          <div class="nav-button-container">
-            <button class="nav-button" id="repos-nav-button">
-              <div class="nav-button-text-container">
-                <h2 class="nav-button-text">Repositories</h2>
-              </div>
-            </button>
-          </div>
-          <div class="nav-button-container">
-            <a
-              href="https://github.com/staten-island-tech/api-project-just-max-aronov"
-              target="_blank"
-              class="nav-button"
-              id="code-nav-button"
-            >
-              <div class="nav-button-text-container">
-                <h2 class="nav-button-text">Code</h2>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="tooltip-container">
-        <div id="tooltip-text-container">
-          <h3 id="tooltip-text"></h3>
-        </div>
-      </div>
-    </section>
-    <section id="user-search-section">
-      <div id="user-search-container">
-        <div id="user-search-input-container">
-          <input
-            type="text"
-            id="user-search-input"
-            placeholder="Search for a specific username"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="user-filter-section">
-      <div id="user-filter-container">
-        <div id="reset-user-filters-button-container">
-          <button id="reset-user-filters-button">
-            <div id="reset-user-filters-button-text-container">
-              <h2 id="reset-user-filters-button-text">Reset User Filters</h2>
+    </div>
+  </header>
+  <section id="navigation-section">
+    <div id="nav-bar">
+      <div id="nav-bar-container">
+        <div class="nav-button-container">
+          <button class="nav-button" id="users-nav-button">
+            <div class="nav-button-text-container">
+              <h2 class="nav-button-text">Users</h2>
             </div>
           </button>
         </div>
-        <div id="user-follower-filter-container"></div>
-        <div id="user-following-filter-container"></div>
-        <div id="user-repos-filter-container"></div>
-        <div id="user-gists-filter-container"></div>
+        <div class="nav-button-container">
+          <button class="nav-button" id="repos-nav-button">
+            <div class="nav-button-text-container">
+              <h2 class="nav-button-text">Repositories</h2>
+            </div>
+          </button>
+        </div>
+        <div class="nav-button-container">
+          <a href="https://github.com/staten-island-tech/api-project-just-max-aronov" target="_blank" class="nav-button"
+            id="code-nav-button">
+            <div class="nav-button-text-container">
+              <h2 class="nav-button-text">Code</h2>
+            </div>
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
+    <div id="tooltip-container">
+      <div id="tooltip-text-container">
+        <h3 id="tooltip-text"></h3>
+      </div>
+    </div>
+  </section>
+  <section id="user-search-section">
+    <div id="user-search-container">
+      <div id="user-search-input-container">
+        <input type="text" id="user-search-input" placeholder="Search for a specific username" />
+      </div>
+    </div>
+  </section>
+  <section id="user-filter-section">
+    <div id="user-filter-container">
+      <div id="reset-user-filters-button-container">
+        <button id="reset-user-filters-button">
+          <div id="reset-user-filters-button-text-container">
+            <h2 id="reset-user-filters-button-text">Reset User Filters</h2>
+          </div>
+        </button>
+      </div>
+      <div class="user-filter-container" id="user-follower-filter-container">
+        <div class="user-follower-filter-option" id="user-followers-filter-option-tl"></div>
+        <div class="user-follower-filter-option" id="user-followers-filter-option-tr"></div>
+        <div class="user-follower-filter-option" id="user-followers-filter-option-bl"></div>
+        <div class="user-follower-filter-option" id="user-followers-filter-option-br"></div>
+      </div>
+      <div class="user-filter-container" id="user-following-filter-container">
+        <div class="user-following-filter-option" id="user-following-filter-option-tl"></div>
+        <div class="user-following-filter-option" id="user-following-filter-option-tr"></div>
+        <div class="user-following-filter-option" id="user-following-filter-option-bl"></div>
+        <div class="user-following-filter-option" id="user-following-filter-option-br"></div>
+      </div>
+      <div class="user-filter-container" id="user-repos-filter-container">
+        <div class="user-repos-filter-option" id="user-repos-filter-option-tl"></div>
+        <div class="user-repos-filter-option" id="user-repos-filter-option-tr"></div>
+        <div class="user-repos-filter-option" id="user-repos-filter-option-bl"></div>
+        <div class="user-repos-filter-option" id="user-repos-filter-option-br"></div>
+      </div>
+      <div class="user-filter-container" id="user-gists-filter-container">
+        <div class="user-gists-filter-option" id="user-gists-filter-option-tl"></div>
+        <div class="user-gists-filter-option" id="user-gists-filter-option-tr"></div>
+        <div class="user-gists-filter-option" id="user-gists-filter-option-bl"></div>
+        <div class="user-gists-filter-option" id="user-gists-filter-option-br"></div>
+      </div>
+    </div>
+    <div id="user-filter-tooltip"></div>
+  </section>
 
-    <script src="./scripts/index.js"></script>
-  </body>
+  <script src="./scripts/index.js"></script>
+</body>
+
 </html>

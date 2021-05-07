@@ -166,3 +166,9 @@ document
       delay: 500,
     });
   });
+
+document
+  .getElementsByClassName("user-follower-filter-option")
+  .addEventListener("mouseover", function () {
+    console.log("click");
+  });
