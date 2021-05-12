@@ -12,6 +12,10 @@ body {
 
 body {
     background-color: #171c24;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body::-webkit-scrollbar {

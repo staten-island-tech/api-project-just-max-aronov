@@ -168,7 +168,20 @@ document
   });
 
 document
-  .getElementsByClassName("user-follower-filter-option")
-  .addEventListener("mouseover", function () {
-    console.log("click");
+  .getElementById("user-filter-section")
+  .addEventListener("mouseover", function (e) {
+    if (
+      (e.target && e.target.matches("div.user-followers-filter-option")) ||
+      e.target.children[0].className === "user-filter-button-text-container"
+    ) {
+      document.getElementById("user-filter-tooltip").style.display = "block";
+    }
+  });
+
+document
+  .getElementById("user-filter-section")
+  .addEventListener("mouseout", function (e) {
+    if (e.target && e.target.matches("div.user-followers-filter-option")) {
+      document.getElementById("user-filter-tooltip").style.display = "none";
+    }
   });

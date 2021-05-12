@@ -107,7 +107,7 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
-.user-follower-filter-option {
+.user-followers-filter-option {
   transition: 0.2s;
 }
 
@@ -119,11 +119,11 @@
   transition: 0.2s;
 }
 
-.user-gists-filter-option {
+.user-commits-filter-option {
   transition: 0.2s;
 }
 
-.user-follower-filter-option:hover {
+.user-followers-filter-option:hover {
   background-color: $primary;
 }
 
@@ -135,22 +135,39 @@
   background-color: $primary;
 }
 
-#user-gists-filter-option-bl {
+#user-commits-filter-option-bl {
   border-radius: 0 0 0 1rem;
 }
 
-#user-gists-filter-option-br {
+#user-commits-filter-option-br {
   border-radius: 0 0 1rem 0;
 }
 
-.user-gists-filter-option:hover {
+.user-commits-filter-option:hover {
   background-color: $primary;
+}
+
+.user-filter-button-text-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  transform: translateY(55%);
+}
+
+.user-filter-text {
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  font-family: $text-font;
+  color: $text-color;
+  text-align: center;
+  font-size: 1.25rem;
 }
 
 #user-filter-tooltip {
   display: none;
   position: absolute;
-  top: 0;
+  top: 13vh;
   left: 20vw;
   background-color: $primary-dark;
   width: 15vw;

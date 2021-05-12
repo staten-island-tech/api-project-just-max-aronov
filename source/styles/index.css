@@ -386,7 +386,7 @@
       grid-template-rows: repeat(2, 1fr);
 }
 
-.user-follower-filter-option {
+.user-followers-filter-option {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -401,12 +401,12 @@
   transition: 0.2s;
 }
 
-.user-gists-filter-option {
+.user-commits-filter-option {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.user-follower-filter-option:hover {
+.user-followers-filter-option:hover {
   background-color: #3D5A80;
 }
 
@@ -418,22 +418,48 @@
   background-color: #3D5A80;
 }
 
-#user-gists-filter-option-bl {
+#user-commits-filter-option-bl {
   border-radius: 0 0 0 1rem;
 }
 
-#user-gists-filter-option-br {
+#user-commits-filter-option-br {
   border-radius: 0 0 1rem 0;
 }
 
-.user-gists-filter-option:hover {
+.user-commits-filter-option:hover {
   background-color: #3D5A80;
 }
 
-.user-filter-tooltip {
+.user-filter-button-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  -webkit-transform: translateY(55%);
+          transform: translateY(55%);
+}
+
+.user-filter-text {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Ubuntu, sans-serif;
+  color: #E0FBFC;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+#user-filter-tooltip {
   display: none;
   position: absolute;
-  top: 0;
+  top: 13vh;
   left: 20vw;
   background-color: #2b3a53;
   width: 15vw;
@@ -453,6 +479,10 @@ body {
 
 body {
   background-color: #171c24;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body::-webkit-scrollbar {
