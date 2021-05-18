@@ -99,9 +99,13 @@ document.getElementById("code-nav-button").addEventListener("mouseout", () => {
   document.getElementById("tooltip-text").textContent = "";
 });
 
-document
-  .getElementById("users-nav-button")
-  .addEventListener("click", function mainPageAnimation() {
+let buttonsArray = [
+  document.getElementById("users-nav-button"),
+  document.getElementById("repos-nav-button"),
+];
+
+buttonsArray.forEach((button) =>
+  button.addEventListener("click", function mainPageAnimation() {
     let userMainHide = anime.timeline({
       easing: "cubicBezier(0.420, 0.000, 0.580, 1.000)",
       duration: 500,
@@ -141,47 +145,48 @@ document
         500
       );
 
-    let userNewShow = anime.timeline({});
-    userNewShow
+    let searchBar = anime.timeline({});
+    searchBar
       .add({
-        targets: document.getElementById("user-search-section"),
+        targets: document.getElementById("search-section"),
         top: 200,
         duration: 1,
         delay: 200,
       })
 
       .add({
-        targets: document.getElementById("user-search-section"),
+        targets: document.getElementById("search-section"),
         opacity: 1,
         top: 152.5,
         duration: 800,
         delay: 300,
       });
 
-    anime({
-      targets: document.getElementById("user-filter-section"),
-      opacity: 1,
-      left: 50,
-      duration: 800,
-      delay: 500,
-    });
-  });
+    let infoPanel = anime.timeline({});
+    infoPanel
+      .add({
+        targets: document.getElementById("information-section"),
+        top: 275,
+        duration: 1,
+        delay: 250,
+      })
 
-document
-  .getElementById("user-filter-section")
-  .addEventListener("mouseover", function (e) {
-    if (
-      (e.target && e.target.matches("div.user-followers-filter-option")) ||
-      e.target.children[0].className === "user-filter-button-text-container"
-    ) {
-      document.getElementById("user-filter-tooltip").style.display = "block";
-    }
-  });
+      .add({
+        targets: document.getElementById("information-section"),
+        opacity: 1,
+        top: 250,
+        duration: 800,
+        delay: 350,
+      });
+  })
+);
 
-document
-  .getElementById("user-filter-section")
-  .addEventListener("mouseout", function (e) {
-    if (e.target && e.target.matches("div.user-followers-filter-option")) {
-      document.getElementById("user-filter-tooltip").style.display = "none";
-    }
-  });
+buttonsArray[0].addEventListener("click", function () {
+  document.getElementById("search-input").placeholder =
+    "Search for a specific username";
+});
+
+buttonsArray[1].addEventListener("click", function () {
+  document.getElementById("search-input").placeholder =
+    "Search for a specific repository";
+});
