@@ -60,6 +60,15 @@ async function userFullfilled() {
   console.log(
     `Username: ${userName} \"${nickName}\" \nAvatar: ${avatarURL}\nStatus: \"${bio}\"\nCreated at ${creationDateFormatted}\nHas ${followers} followers\nFollowing ${following} users\nProfile: ${profileURL}\n${repoCount} public repositories`
   );
+
+  document.getElementById(
+    "name-text"
+  ).textContent = `${userName} "${nickName}"`;
+  document.getElementById("description-text").textContent = `${bio}`;
+  document.getElementById(
+    "creation-date-text"
+  ).textContent = `${creationDateFormatted}`;
+  document.getElementById("image").src = `${avatarURL}`;
 }
 
 document
@@ -183,7 +192,7 @@ buttonsArray.forEach((button) =>
 
 buttonsArray[0].addEventListener("click", function () {
   document.getElementById("search-input").placeholder =
-    "Search for a specific username";
+    "Search for a specific user";
 });
 
 buttonsArray[1].addEventListener("click", function () {

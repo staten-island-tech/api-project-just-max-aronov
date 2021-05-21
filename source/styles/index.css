@@ -297,8 +297,118 @@
   position: absolute;
   top: 100%;
   width: 100vw;
-  height: 62.5vh;
+  height: 63vh;
+}
+
+#information-section-container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 2fr;
+      grid-template-rows: 1fr 2fr;
   background-color: red;
+}
+
+#main-information-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+#identity-information-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1.25fr (1fr)[2];
+      grid-template-rows: 1.25fr repeat(2, 1fr);
+}
+
+#name-text-container {
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+  margin-left: 3%;
+}
+
+#name-text {
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Ubuntu, sans-serif;
+  color: #E0FBFC;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#description-text-container {
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+  margin-left: 3%;
+}
+
+#description-text {
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Ubuntu, sans-serif;
+  color: #E0FBFC;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#creation-date-text-container {
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+  margin-left: 3%;
+}
+
+#creation-date-text {
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Ubuntu, sans-serif;
+  color: #E0FBFC;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#image-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#image-container {
+  margin: auto;
+  width: 10.5vw;
+  height: 20vh;
+}
+
+#image {
+  width: 100%;
+  height: 100%;
 }
 
 html,
