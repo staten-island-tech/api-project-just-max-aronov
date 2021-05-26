@@ -72,7 +72,14 @@ async function userFullfilled() {
   ).textContent = `Created on ${creationDateFormatted}`;
   document.getElementById("image").src = `${avatarURL}`;
 
-  console.log(userFollowers);
+  fetch(userFollowers).then(
+    (data) =>
+      function followerPrint() {
+        data.forEach((follower) => {
+          console.log(follower);
+        });
+      }
+  );
 }
 
 document
