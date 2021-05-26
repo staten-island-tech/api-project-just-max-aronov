@@ -34,6 +34,8 @@ async function userFullfilled() {
   let nickName = userObject.name;
   let repoCount = userObject.public_repos;
 
+  let userFollowers = userObject.followers_url;
+
   let year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(
     creationDatePreformatted
   );
@@ -63,12 +65,14 @@ async function userFullfilled() {
 
   document.getElementById(
     "name-text"
-  ).textContent = `${userName} "${nickName}"`;
-  document.getElementById("description-text").textContent = `${bio}`;
+  ).innerHTML = `<a href="${profileURL}" target="_blank" id="profile-url-linker">${userName}</a> "${nickName}"`;
+  document.getElementById("description-text").textContent = `Bio: ${bio}`;
   document.getElementById(
     "creation-date-text"
-  ).textContent = `${creationDateFormatted}`;
+  ).textContent = `Created on ${creationDateFormatted}`;
   document.getElementById("image").src = `${avatarURL}`;
+
+  console.log(userFollowers);
 }
 
 document

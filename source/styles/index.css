@@ -310,7 +310,8 @@
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 2fr;
       grid-template-rows: 1fr 2fr;
-  background-color: red;
+  background-color: #3D5A80;
+  border-radius: 1rem;
 }
 
 #main-information-section {
@@ -349,6 +350,10 @@
   color: #E0FBFC;
   text-align: center;
   font-size: 2rem;
+}
+
+#profile-url-linker {
+  text-decoration: none;
 }
 
 #description-text-container {
@@ -402,13 +407,14 @@
 
 #image-container {
   margin: auto;
-  width: 10.5vw;
+  width: 11.5vw;
   height: 20vh;
 }
 
 #image {
   width: 100%;
   height: 100%;
+  border-radius: 0 1rem 0 0;
 }
 
 html,
