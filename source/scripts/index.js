@@ -1,8 +1,10 @@
 import { Octokit } from "@octokit/rest";
 import "regenerator-runtime/runtime";
 import anime from "animejs/lib/anime.es.js";
+import { random } from "animejs";
 
 const octokit = new Octokit();
+let randomUser;
 
 window.onkeyup = keyup;
 
@@ -21,6 +23,20 @@ function userObjectObtain() {
     username: inputTextValue,
   });
 }
+
+function listOfUsers() {
+  return octokit.rest.users.list().then(function (value) {
+    randomUser =
+      value.data[Math.floor(Math.random() * value.data.length)].login;
+
+    document.getElementById("api-showcase-image").src =
+      "https://github-readme-stats.vercel.app/api?username=" +
+      randomUser +
+      "&show_icons=true";
+  });
+}
+
+listOfUsers();
 
 async function userFullfilled() {
   const userObject = await (await userObjectObtain()).data;
@@ -95,19 +111,6 @@ document.getElementById("users-nav-button").addEventListener("mouseout", () => {
   document.getElementById("tooltip-text").textContent = "";
 });
 
-document
-  .getElementById("repos-nav-button")
-  .addEventListener("mouseover", () => {
-    document.getElementById("tooltip-text-container").style.opacity = 1;
-    document.getElementById("tooltip-text").textContent =
-      "Search for and view information about a repository";
-  });
-
-document.getElementById("repos-nav-button").addEventListener("mouseout", () => {
-  document.getElementById("tooltip-text-container").style.opacity = 0;
-  document.getElementById("tooltip-text").textContent = "";
-});
-
 document.getElementById("code-nav-button").addEventListener("mouseover", () => {
   document.getElementById("tooltip-text-container").style.opacity = 1;
   document.getElementById("tooltip-text").textContent =
@@ -119,13 +122,9 @@ document.getElementById("code-nav-button").addEventListener("mouseout", () => {
   document.getElementById("tooltip-text").textContent = "";
 });
 
-let buttonsArray = [
-  document.getElementById("users-nav-button"),
-  document.getElementById("repos-nav-button"),
-];
-
-buttonsArray.forEach((button) =>
-  button.addEventListener("click", function mainPageAnimation() {
+document
+  .getElementById("users-nav-button")
+  .addEventListener("click", function mainPageAnimation() {
     let userMainHide = anime.timeline({
       easing: "cubicBezier(0.420, 0.000, 0.580, 1.000)",
       duration: 500,
@@ -160,6 +159,22 @@ buttonsArray.forEach((button) =>
       .add(
         {
           targets: document.getElementById("navigation-section"),
+          top: -100,
+        },
+        500
+      )
+      .add(
+        {
+          targets: document.getElementById("api-showcase-section"),
+          top: 500,
+          opacity: 0,
+        },
+        0
+      )
+
+      .add(
+        {
+          targets: document.getElementById("api-showcase-section"),
           top: -100,
         },
         500
@@ -198,15 +213,15 @@ buttonsArray.forEach((button) =>
         duration: 800,
         delay: 350,
       });
-  })
-);
+  });
 
-buttonsArray[0].addEventListener("click", function () {
-  document.getElementById("search-input").placeholder =
-    "Search for a specific user";
-});
+document
+  .getElementById("users-nav-button")
+  .addEventListener("click", function () {
+    document.getElementById("search-input").placeholder =
+      "Search for a specific user";
+  });
 
-buttonsArray[1].addEventListener("click", function () {
-  document.getElementById("search-input").placeholder =
-    "Search for a specific repository";
+octokit.rest.users.list().then(() => {
+  console.log;
 });

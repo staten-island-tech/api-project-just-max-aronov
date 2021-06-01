@@ -1,0 +1,21 @@
+#api-showcase-section {
+    position: absolute;
+    top: 70vh;
+    width: 100vw;
+    height: 25vh;
+}
+
+#api-showcase-panel {
+    margin: auto;
+    width: 32.5vw;
+    height: 100%;
+    background-color: $primary-dark;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+}
+
+#api-showcase-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
